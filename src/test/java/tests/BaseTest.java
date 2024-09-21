@@ -10,7 +10,7 @@ import org.testng.asserts.SoftAssert;
 
 public class BaseTest {
     WebDriver driver;
-    String expectedResult="Success";
+
     SoftAssert softAssert = new SoftAssert();
     Assertion hardAssert = new Assertion();
     String baseurl = "https://parabank.parasoft.com/parabank/index.htm?ConnType=JDBC";

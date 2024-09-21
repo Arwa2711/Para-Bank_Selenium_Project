@@ -20,7 +20,11 @@ public class LoginPage extends BasePage {
     WebElement loginButton;
 
     @FindBy(xpath= "//div/h1[1]")
-    WebElement inHomeField;
+    WebElement errorTitleField;
+
+    @FindBy(xpath= "//*[@id=\"rightPanel\"]/p")
+    WebElement error;
+
 
 
 
@@ -36,11 +40,8 @@ public class LoginPage extends BasePage {
         passwordField.sendKeys(password);
         loginButton.click();
 
-        if (inHomeField.isDisplayed()) {
-            return "Success";
-        } else {
-            return "fail";
-        }
+      return   errorTitleField.getText();
+
     }
 
 
